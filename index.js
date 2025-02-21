@@ -13,6 +13,7 @@ const DB_URL = process.env.MONGO_URL
 app.get('/', (req, res) => {
     res.send("This is home route!");
 })
+app.use('/todo', TodoRouter);
 
 app.listen(3030, async ()=>{
 console.log('[server] is running')
@@ -21,4 +22,3 @@ connectDb(DB_URL);
 
 
 
-app.use('/todo', TodoRouter);
