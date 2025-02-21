@@ -7,9 +7,9 @@ const TodoRouter= express.Router()
 
 TodoRouter.post('/create',create)
 
-TodoRouter.put('/update/:id', update)
+TodoRouter.patch('/update/:id', update)
 
-TodoRouter.delete('delete/:id', deletebyid)
+TodoRouter.delete('/delete/:id', deletebyid)
 
 TodoRouter.get('/showall', getDataF)
 
